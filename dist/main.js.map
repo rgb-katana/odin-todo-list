@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":"yBAEAA,QAAQC,IAAI,Q","sources":["webpack://odin-todo-list/./src/js/controller.js"],"sourcesContent":["import '../sass/main.scss';\r\n\r\nconsole.log('Hello');\r\n"],"names":["console","log"],"sourceRoot":""}
