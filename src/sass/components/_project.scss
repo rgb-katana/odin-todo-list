@@ -1,0 +1,19 @@
+.project {
+  &__head {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    & > * {
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+}

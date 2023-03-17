@@ -1,0 +1,12 @@
+.header {
+  background-color: $border-color-lt;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $background-color-lt;
+
+  font-family: 'Lato';
+  font-weight: 900;
+  font-size: 2rem;
+}

@@ -1,0 +1,14 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 5rem;
+  padding: 2rem;
+
+  background-color: $component-color-small-lt;
+
+  &:nth-child(even) {
+    background-color: $component-color-small-2-lt;
+  }
+}

@@ -1,0 +1,29 @@
+.todos {
+  background-color: $component-color-big-lt;
+  box-shadow: 0rem 1rem 0.5rem rgba($shadow-color-lt, 0.3);
+
+  padding: 2rem;
+
+  border-radius: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+
+    overflow-y: auto;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
