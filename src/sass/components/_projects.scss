@@ -15,6 +15,7 @@
   }
 
   &__list {
+    width: 100%;
     height: 80vh;
     overflow-y: auto;
 
@@ -37,5 +38,24 @@
     border-radius: 0.3rem;
 
     box-shadow: 0rem 0.5rem 0.5rem rgba($shadow-color-lt, 0.3);
+  }
+
+  &__add {
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $component-color-big-lt;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:hover > svg {
+      fill: $color-good;
+    }
   }
 }

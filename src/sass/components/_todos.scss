@@ -26,4 +26,29 @@
       margin-bottom: 2rem;
     }
   }
+
+  &__editing {
+    width: 100%;
+    height: 80vh;
+    background-color: antiquewhite;
+  }
+
+  &__add {
+    background-color: $component-color-big-lt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 5rem;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:hover > svg {
+      fill: $color-good;
+    }
+  }
 }
