@@ -19,17 +19,66 @@
               <div class="project__head">
                 <h3 class="project__title">My first project</h3>
                 <div class="project__controls">
-                  <div class="project__edit">E</div>
-                  <div class="project__delete">D</div>
+                  <button class="project__edit">
+                    <svg>
+                      <use href="./img/pencil.svg#pencil"></use>
+                    </svg>
+                  </button>
+                  <button class="project__delete">
+                    <svg>
+                      <use href="./img/delete.svg#delete"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <h4 class="project__description">
                 This is your template project. You can edit it or remove it
-                enterily.
+                entirely.
               </h4>
               <h4 class="project__num-todos">
                 todos in this project: <span class="num-todos">1</span>
               </h4>
+            </div>
+
+            <!-- <div class="projects__project project--edit">
+              <div class="project__head project__head--edit">
+                <input
+                  type="text"
+                  class="project__title project__title--edit"
+                  placeholder="My first project"
+                />
+                <div class="project__controls">
+                  <button class="project__unedit">
+                    <svg>
+                      <use href="./img/pencil-remove.svg#pencil-remove"></use>
+                    </svg>
+                  </button>
+                  <button class="project__check">
+                    <svg>
+                      <use href="./img/check.svg#check"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <textarea
+                name="project__description project__description--edit"
+                id="description--edit"
+                cols="30"
+                rows="2"
+                maxlength="60"
+                placeholder="This is your template project. You can edit it or remove it entirely."
+              ></textarea>
+              <h4 class="project__num-todos project__num-todos--edit">
+                todos in this project: <span class="num-todos">1</span>
+              </h4>
+            </div> -->
+
+            <div class="projects__add">
+              <button class="projects__add">
+                <svg>
+                  <use href="./img/plus.svg#plus"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -38,13 +87,70 @@
           <div class="todos__list">
             <div class="todos_todo todo">
               <div class="todo__title"><h3>My first todo</h3></div>
-              <div class="todo__due-date"><h4>20.03.22</h4></div>
+              <div class="todo__due-date">
+                <h4>Due: <span class="date">20.03.22</span></h4>
+              </div>
               <div class="todo__controls">
-                <button class="todo__expand">expand</button>
-                <button class="todo__expand">delete</button>
+                <button class="todo__expand">
+                  <svg>
+                    <use href="./img/arrow-expand.svg#expand"></use>
+                  </svg>
+                </button>
+                <button class="todo__delete">
+                  <svg>
+                    <use href="./img/delete.svg#delete"></use>
+                  </svg>
+                </button>
               </div>
             </div>
+
+            <!-- <div class="todos_todo todo--big">
+              <div class="todo__title--big">
+                <h2 class="title-heading">The title:</h2>
+                <input
+                  type="text"
+                  maxlength="25"
+                  placeholder="My First Todo"
+                  class="todo__title-input"
+                />
+              </div>
+              <div class="todo__description--big">
+                <h2 class="description-heading">The description:</h2>
+                <textarea
+                  type="text"
+                  rows="3"
+                  cols="40"
+                  maxlength="80"
+                  placeholder="This is your template project. You can edit it or remove it entirely."
+                  class="todo__description-input"
+                ></textarea>
+              </div>
+              <div class="todo__due-date--big">
+                <h2 class="due-heading">Due:</h2>
+                <input type="date" class="todo__due-input" />
+              </div>
+              <div class="todo__controls--big">
+                <button class="todo__collapse">
+                  <svg>
+                    <use href="./img/arrow-collapse.svg#collapse"></use>
+                  </svg>
+                </button>
+                <button class="todo__check">
+                  <svg>
+                    <use href="./img/check.svg#check"></use>
+                  </svg>
+                </button>
+              </div>
+            </div> -->
+            <div class="todos__add">
+              <button class="todos__add">
+                <svg>
+                  <use href="./img/plus.svg#plus"></use>
+                </svg>
+              </button>
+            </div>
           </div>
+          <!-- <div class="todos__editing"></div> -->
         </div>
       </div>
       <div class="footer">GITHUB</div>

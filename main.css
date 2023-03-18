@@ -80,6 +80,50 @@ h4 {
   font-size: 1.3rem;
 }
 
+svg {
+  width: 3rem;
+  height: 3rem;
+  transition: 0.2s;
+}
+
+button {
+  border: none;
+}
+button:hover svg {
+  fill: crimson;
+}
+
+input,
+input:focus,
+input::placeholder {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1.3rem;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  color: black;
+}
+
+input[type=date] {
+  display: block;
+  width: 50% !important;
+}
+
+textarea,
+textarea:focus,
+textarea::placeholder {
+  resize: none;
+  background-color: inherit;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  color: black;
+  text-align: center;
+}
+
 .projects {
   background-color: #fafafa;
   box-shadow: 0rem 1rem 0.5rem rgba(63, 63, 70, 0.3);
@@ -93,6 +137,7 @@ h4 {
   margin-bottom: 2rem;
 }
 .projects__list {
+  width: 100%;
   height: 80vh;
   overflow-y: auto;
 }
@@ -109,6 +154,21 @@ h4 {
   padding: 1rem;
   border-radius: 0.3rem;
   box-shadow: 0rem 0.5rem 0.5rem rgba(63, 63, 70, 0.3);
+}
+.projects__add {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+.projects__add svg {
+  width: 4rem;
+  height: 4rem;
+}
+.projects__add:hover > svg {
+  fill: lightseagreen;
 }
 
 .todos {
@@ -133,6 +193,25 @@ h4 {
 .todos__list > *:not(:last-child) {
   margin-bottom: 2rem;
 }
+.todos__editing {
+  width: 100%;
+  height: 80vh;
+  background-color: antiquewhite;
+}
+.todos__add {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+.todos__add svg {
+  width: 4rem;
+  height: 4rem;
+}
+.todos__add:hover > svg {
+  fill: lightseagreen;
+}
 
 .todo {
   display: flex;
@@ -140,23 +219,131 @@ h4 {
   align-items: center;
   height: 5rem;
   padding: 2rem;
+  border-radius: 0.3rem;
   background-color: #e5e5e5;
 }
 .todo:nth-child(even) {
   background-color: #f3f1f1;
 }
+.todo__expand {
+  background-color: inherit;
+}
+.todo__delete {
+  background-color: inherit;
+}
+.todo--big {
+  height: 14rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr min-content;
+  justify-items: center;
+  background-color: lightblue;
+}
+.todo--big > * h2 {
+  margin-bottom: 1rem;
+}
+.todo--big > * {
+  width: 100%;
+}
+.todo--big > * input:focus, .todo--big > * input {
+  width: 80%;
+  background-color: lightblue;
+  border: none;
+  outline: none;
+  color: black;
+  text-align: center;
+}
+.todo--big > * input::placeholder {
+  color: black;
+}
+.todo__title--big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.todo__description--big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.todo__description--big input {
+  height: 3rem;
+}
+.todo__due-date--big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.todo__controls--big {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.todo__controls--big > * {
+  background-color: lightblue;
+}
+.todo__check:hover > svg {
+  fill: lightseagreen;
+}
+.todo__expand:hover > svg {
+  fill: lightseagreen;
+}
 
+.project {
+  width: 100%;
+}
 .project__head {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .project__controls > * {
   display: inline-block;
   font-size: 1.5rem;
+  background-color: inherit;
 }
 .project__description {
   text-align: center;
+  width: 100%;
+}
+.project > *:not(:last-child) {
+  border-bottom: 1px solid #18181b;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.project__edit {
+  background-color: inherit;
+}
+.project__delete {
+  background-color: inherit;
+}
+.project--edit > *:not(:last-child) {
+  border-bottom: 1px solid #18181b;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.project__head--edit input {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.project__title--edit, .project__title--edit::placeholder {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.project__description--edit {
+  width: 100% !important;
+}
+.project__check:hover > svg {
+  fill: lightseagreen;
+}
+.project__edit:hover > svg {
+  fill: lightseagreen;
 }
 
 .header {
