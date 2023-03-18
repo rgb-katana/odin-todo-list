@@ -34,21 +34,22 @@
   }
 
   &__add {
-    background-color: $component-color-big-lt;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 5rem;
+    &-btn {
+      background-color: $component-color-big-lt;
+      height: 5rem;
 
-    svg {
-      width: 4rem;
-      height: 4rem;
-    }
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
 
-    &:hover > svg {
-      fill: $color-good;
+      &:hover > svg {
+        fill: $color-good;
+      }
     }
   }
 }
