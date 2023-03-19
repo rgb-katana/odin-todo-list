@@ -38,6 +38,7 @@
 
   &--edit {
     & > *:not(:last-child) {
+      width: 100%;
       border-bottom: 1px solid $border-color-lt;
       padding-bottom: 1rem;
       padding-top: 1rem;
@@ -74,4 +75,11 @@
 
 .chosen {
   background-color: coral;
+}
+
+.shaking {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }

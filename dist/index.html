@@ -65,7 +65,7 @@
                 </div>
               </div>
               <textarea
-                name="project__description project__description--edit"
+                class="project__description project__description--edit"
                 id="description--edit"
                 cols="30"
                 rows="2"
@@ -89,7 +89,7 @@
           </div>
         </div>
         <div class="todos">
-          <h2 class="todos__title"></h2>
+          <h2 class="todos__title">No Project Selected</h2>
           <div class="todos__list">
             <!-- TODO ITEM -->
 
@@ -114,32 +114,42 @@
 
             <!-- TODOS EDIT -->
 
-            <!-- <div class="todos_todo todo--big">
-              <div class="todo__title--big">
-                <h2 class="title-heading">The title:</h2>
+            <!-- <div class="todos__todo todo--edit" data-todo-num="td1">
+              <input
+                class="todo__title todo__title--edit"
+                type="text"
+                placeholder="Input your task"
+                maxlength="50"
+              />
+              <input type="date" class="todo__due-date todo__due-date--edit" />
+              <div class="todo__controls todo__controls--edit">
+                <button class="todo__expand">
+                  <svg>
+                    <use href="./img/return.svg#return"></use>
+                  </svg></button
+                ><button class="todo__delete">
+                  <svg>
+                    <use href="./img/check.svg#check"></use>
+                  </svg>
+                </button>
+              </div>
+            </div> -->
+
+            <!-- <div class="todos_todo todo--edit">
+              <div class="todo__title--edit">
+                <h2 class="title-heading">The task:</h2>
                 <input
                   type="text"
-                  maxlength="25"
+                  maxlength="50"
                   placeholder="My First Todo"
                   class="todo__title-input"
                 />
               </div>
-              <div class="todo__description--big">
-                <h2 class="description-heading">The description:</h2>
-                <textarea
-                  type="text"
-                  rows="3"
-                  cols="40"
-                  maxlength="80"
-                  placeholder="This is your template todo description. You can edit it or remove it entirely."
-                  class="todo__description-input"
-                ></textarea>
-              </div>
-              <div class="todo__due-date--big">
+              <div class="todo__due-date--edit">
                 <h2 class="due-heading">Due:</h2>
                 <input type="date" class="todo__due-input" />
               </div>
-              <div class="todo__controls--big">
+              <div class="todo__controls--edit">
                 <button class="todo__collapse">
                   <svg>
                     <use href="./img/arrow-collapse.svg#collapse"></use>

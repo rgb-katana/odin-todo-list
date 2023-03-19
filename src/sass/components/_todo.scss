@@ -1,14 +1,25 @@
 .todo {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 60% 1fr min-content;
+  justify-items: center;
   align-items: center;
 
   height: 5rem;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   border-radius: 0.3rem;
 
   background-color: $component-color-small-lt;
+
+  &__title {
+    text-align: left;
+    width: 100%;
+  }
+
+  &:nth-child(odd) {
+    background-color: $component-color-small-lt;
+  }
 
   &:nth-child(even) {
     background-color: $component-color-small-2-lt;
@@ -18,23 +29,37 @@
     background-color: inherit;
   }
 
+  &__expand:hover {
+    svg {
+      fill: $color-good;
+    }
+  }
+
+  &__return {
+    background-color: inherit;
+  }
+
   &__delete {
     background-color: inherit;
   }
 
-  &--big {
-    height: 14rem;
-    padding: 2rem;
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &--edit {
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr min-content;
+    grid-template-columns: 60% 1fr min-content;
     justify-items: center;
 
-    background-color: $todo-input-color;
-
-    & > * h2 {
-      margin-bottom: 1rem;
-    }
+    background-color: inherit;
+    border-radius: 0.3rem;
 
     & > * {
       width: 100%;
@@ -44,7 +69,7 @@
     & > * input {
       width: 80%;
 
-      background-color: $todo-input-color;
+      background-color: inherit;
       border: none;
       outline: none;
       color: black;
@@ -57,38 +82,26 @@
     }
   }
 
-  &__title--big {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+  &__title--edit::placeholder,
+  &__title--edit:focus {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 
-  &__description--big {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-
-    input {
-      height: 3rem;
-    }
+  &__due-date--edit {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 
-  &__due-date--big {
+  &__controls--edit {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-  }
-
-  &__controls--big {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
 
     & > * {
-      background-color: $todo-input-color;
+      background-color: inherit;
     }
   }
 
@@ -96,7 +109,7 @@
     fill: $color-good;
   }
 
-  &__expand:hover > svg {
-    fill: $color-good;
+  &__return:hover > svg {
+    fill: $color-bad;
   }
 }
