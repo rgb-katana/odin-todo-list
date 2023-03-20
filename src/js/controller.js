@@ -255,7 +255,9 @@ function sumbitTodoEdits() {
         return;
       }
 
+      console.log(isCreatingNewTodo);
       const isEditing = isCreatingNewTodo === true ? false : true;
+      console.log(isEditing);
 
       model.updateTodo(
         currentProject,
@@ -272,6 +274,7 @@ function sumbitTodoEdits() {
 
       isEditingTodo = false;
       projectsView.renderProjects(model.state.projects, currentProject);
+      isCreatingNewTodo = isCreatingNewTodo === true ? false : false;
       projectsView.renderPlusProject();
       todosView.RenderPlusTodo();
     }

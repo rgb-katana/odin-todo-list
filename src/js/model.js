@@ -87,7 +87,7 @@ export function updateTodo(curProject, todoNum, title, date, isEditing) {
     let r = /\d+/;
     let number = todoNum.match(r);
 
-    todoNum = `td${number[0] + 1}`;
+    todoNum = `td${+number[0] + 1}`;
   }
   state.projects[curProject].todos[todoNum] = {
     title: '',
