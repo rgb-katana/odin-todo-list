@@ -40,6 +40,10 @@
     background-color: inherit;
   }
 
+  &__delete:hover {
+    background-color: crimson;
+  }
+
   &--edit {
     & > *:not(:last-child) {
       width: 100%;
@@ -68,12 +72,16 @@
     width: 100% !important;
   }
 
-  &__check:hover > svg {
-    fill: $color-good;
+  &__check:hover {
+    background-color: $color-good;
   }
 
-  &__edit:hover > svg {
-    fill: $color-good;
+  &__edit:hover {
+    background-color: $color-good;
+  }
+
+  &__unedit:hover {
+    background-color: $color-bad;
   }
 }
 

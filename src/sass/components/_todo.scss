@@ -34,9 +34,7 @@
   }
 
   &__expand:hover {
-    svg {
-      fill: $color-good;
-    }
+    background-color: $color-good;
   }
 
   &__return {
@@ -45,6 +43,10 @@
 
   &__delete {
     background-color: inherit;
+  }
+
+  &__delete:hover {
+    background-color: $color-bad;
   }
 
   &__controls {
@@ -114,11 +116,15 @@
     }
   }
 
-  &__check:hover > svg {
-    fill: $color-good;
+  &__check:hover {
+    background-color: $color-good;
   }
 
   &__return:hover > svg {
     fill: $color-bad;
   }
+}
+
+.todo__unedit:hover {
+  background-color: $color-bad;
 }
