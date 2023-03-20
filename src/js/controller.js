@@ -31,7 +31,6 @@ function selectProject() {
         elem.classList.remove('chosen');
       });
 
-      console.log(e.target.closest('.project'));
       e.target.closest('.project').classList.add('chosen');
       const projectNum = e.target.closest('.project').dataset.projectNum;
       currentProject = projectNum;
@@ -62,9 +61,7 @@ function deleteProject() {
         return;
       }
       e.preventDefault();
-      console.log(e.target.closest('.project').dataset);
       const projectNum = e.target.closest('.project').dataset.projectNum;
-      console.log(projectNum);
       model.deleteProject(projectNum);
       projectsView.renderProjects(model.state.projects);
       if (currentProject === projectNum) {
@@ -232,12 +229,10 @@ function sumbitTodoEdits() {
 
       const todoNum = curTodo.dataset.todoNum;
       const newTask = document.querySelector('.todo__title--edit').value;
-      console.log(newTask);
       const newDate =
         document.querySelector('.todo__due-date--edit').value === ''
           ? 'No date.'
           : document.querySelector('.todo__due-date--edit').value;
-      console.log(newDate);
       let formattedDate = '';
 
       if (newDate !== 'No date.') {
@@ -255,9 +250,7 @@ function sumbitTodoEdits() {
         return;
       }
 
-      console.log(isCreatingNewTodo);
       const isEditing = isCreatingNewTodo === true ? false : true;
-      console.log(isEditing);
 
       model.updateTodo(
         currentProject,
