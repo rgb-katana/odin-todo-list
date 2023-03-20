@@ -30,10 +30,13 @@ function createProject(title, description, numTodos, counter) {
   buttonDelete.insertAdjacentHTML(
     'afterbegin',
     `
-      <svg>
-        <use href="${deleteSvg}#delete"></use>
-      </svg>
+    <img src='${deleteSvg}'>
     `
+    // `
+    //   <svg>
+    //     <use href="${deleteSvg}#delete"></use>
+    //   </svg>
+    // `
   );
 
   // projectControls.append(buttonEdit, buttonDelete);
@@ -69,9 +72,7 @@ function createAddProject() {
   addBtn.insertAdjacentHTML(
     'afterbegin',
     `
-    <svg>
-      <use href="${plusSvg}#plus"></use>
-    </svg>
+    <img src='${plusSvg}'>
     `
   );
   addContainer.append(addBtn);
@@ -122,18 +123,14 @@ export function renderEditNewProject(projectNum) {
   buttonUnedit.insertAdjacentHTML(
     'afterbegin',
     `
-      <svg>
-        <use href="${pencilRemoveSvg}#pencil-remove"></use>
-      </svg>
+    <img src='${pencilRemoveSvg}'>
     `
   );
 
   buttonCheck.insertAdjacentHTML(
     'afterbegin',
     `
-      <svg>
-        <use href="${checkSvg}#check"></use>
-      </svg>
+    <img src='${checkSvg}'>
     `
   );
 

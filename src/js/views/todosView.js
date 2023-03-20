@@ -37,18 +37,14 @@ export function renderTodos(title, todos) {
     expandBtn.insertAdjacentHTML(
       'afterbegin',
       `
-      <svg>
-        <use href="${pencilSvg}#pencil"></use>
-      </svg>
+      <img src='${pencilSvg}'>
       `
     );
     const deleteBtn = createEl('button', ['todo__delete']);
     deleteBtn.insertAdjacentHTML(
       'afterbegin',
       `
-    <svg>
-      <use href="${deleteSvg}#delete"></use>
-    </svg>
+      <img src='${deleteSvg}'>
     `
     );
 
@@ -70,9 +66,7 @@ function createAddTodo() {
   addBtn.insertAdjacentHTML(
     'afterbegin',
     `
-    <svg>
-      <use href="${plusSvg}#plus"></use>
-    </svg>
+    <img src='${plusSvg}'>
     `
   );
   addContainer.append(addBtn);
@@ -119,9 +113,7 @@ export function renderEditTodo(curTodo, todoNum, task, date) {
   returnBtn.insertAdjacentHTML(
     'afterbegin',
     `
-    <svg>
-      <use href="${returnSvg}#return"></use>
-    </svg>
+    <img src='${returnSvg}'>
     `
   );
 
@@ -129,9 +121,7 @@ export function renderEditTodo(curTodo, todoNum, task, date) {
   checkBtn.insertAdjacentHTML(
     'afterbegin',
     `
-    <svg>
-      <use href="${checkSvg}#check"></use>
-    </svg>
+    <img src='${checkSvg}'>
     `
   );
 
@@ -154,13 +144,9 @@ export function renderEditNewTodo(todoNum) {
   <input type="date" class="todo__due-date todo__due-date--edit" />
   <div class="todo__controls todo__controls--edit">
     <button class="todo__unedit">
-      <svg>
-        <use href="${pencilRemoveSvg}#pencil-remove"></use>
-      </svg></button
+    <img src='${pencilRemoveSvg}'></button
     ><button class="todo__check">
-      <svg>
-        <use href="${checkSvg}#check"></use>
-      </svg>
+    <img src='${checkSvg}'>
     </button>
   </div>
   `;
