@@ -78,13 +78,16 @@ function createAddProject() {
   return addContainer;
 }
 
-export function renderProjects(projects) {
+export function renderProjects(projects, currentProject) {
   projectsList.innerHTML = '';
   for (const property in projects) {
     const title = projects[property]['title'];
     const description = projects[property]['description'];
     const numTodos = Object.values(projects[property]['todos']).length;
     const newProject = createProject(title, description, numTodos, property);
+    if (property === currentProject) {
+      newProject.classList.add('chosen');
+    }
     projectsList.append(newProject);
   }
 }

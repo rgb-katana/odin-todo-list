@@ -7,6 +7,8 @@ import plusSvg from '../../img/plus.svg';
 import pencilSvg from '../../img/pencil.svg';
 import returnSvg from '../../img/return.svg';
 import checkSvg from '../../img/check.svg';
+import pencilRemoveSvg from '../../img/pencil-remove.svg';
+
 import { format, parse } from 'date-fns';
 
 const projectTitle = document.querySelector('.todos__title');
@@ -137,4 +139,33 @@ export function renderEditTodo(curTodo, todoNum, task, date) {
   curTodo.append(todoControls);
 
   return todoEl;
+}
+
+export function renderEditNewTodo(todoNum) {
+  const todoEl = createEl('div', ['todos__todo', 'todo', 'todo--edit']);
+
+  const todoContent = `
+  <input
+    class="todo__title todo__title--edit"
+    type="text"
+    placeholder="Input your task"
+    maxlength="50"
+  />
+  <input type="date" class="todo__due-date todo__due-date--edit" />
+  <div class="todo__controls todo__controls--edit">
+    <button class="todo__unedit">
+      <svg>
+        <use href="${pencilRemoveSvg}#pencil-remove"></use>
+      </svg></button
+    ><button class="todo__check">
+      <svg>
+        <use href="${checkSvg}#check"></use>
+      </svg>
+    </button>
+  </div>
+  `;
+
+  todoEl.dataset.todoNum = `${todoNum}`;
+  todoEl.insertAdjacentHTML('afterbegin', todoContent);
+  todosLists.append(todoEl);
 }

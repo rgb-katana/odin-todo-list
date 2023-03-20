@@ -13,19 +13,7 @@ export const state = {
           title: 'My First Todo',
           description:
             'This is your template todo description. You can edit it or remove it entirely.',
-          due: format(new Date(2022, 3, 20), 'MM, dd, y'),
-        },
-        td2: {
-          title: 'My Second Todo',
-          description:
-            'This is your template todo description. You can edit it or remove it entirely.',
-          due: format(new Date(2022, 7, 26), 'MM, dd, y'),
-        },
-        td3: {
-          title: 'My Third Todo',
-          description:
-            'This is your template todo description. You can edit it or remove it entirely.',
-          due: format(new Date(2022, 5, 2), 'MM, dd, y'),
+          due: format(new Date(2022, 2, 20), 'MM, dd, y'),
         },
       },
     },
@@ -63,6 +51,7 @@ export function deleteProject(projectNum) {
   console.log(state.projects[projectNum]);
   delete state.projects[projectNum];
   console.log(state.projects[projectNum]);
+  persistProjects();
 }
 
 export function addProjectEditing(projectNum) {
@@ -74,11 +63,13 @@ export function addProjectEditing(projectNum) {
     todos: {},
   };
   console.log(state.projects[projectNum]);
+  persistProjects();
 }
 
 export function addRealProject(projectNum, title, description) {
   state.projects[projectNum].title = title;
   state.projects[projectNum].description = description;
+  persistProjects();
 }
 
 export function deleteTodo(projectNum, todoNum) {
@@ -86,4 +77,26 @@ export function deleteTodo(projectNum, todoNum) {
   console.log(todoNum);
   delete state.projects[projectNum].todos[todoNum];
   console.log(state.projects[projectNum].todos);
+  persistProjects();
 }
+
+export function updateTodo(curProject, todoNum, title, date, isEditing) {
+  console.log(state.projects[curProject].todos[todoNum]);
+
+  if (state.projects[curProject].todos[todoNum] && !isEditing) {
+    let r = /\d+/;
+    let number = todoNum.match(r);
+
+    todoNum = `td${number[0] + 1}`;
+  }
+  state.projects[curProject].todos[todoNum] = {
+    title: '',
+    due: '',
+  };
+  state.projects[curProject].todos[todoNum].title = title;
+  state.projects[curProject].todos[todoNum].due = date;
+  console.log(state.projects[curProject].todos[todoNum]);
+  persistProjects();
+}
+
+init();
