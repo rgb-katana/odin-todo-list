@@ -1,6 +1,10 @@
 .project {
   width: 100%;
 
+  @include respond(tab-land) {
+    width: 33%;
+  }
+
   &__head {
     width: 100%;
 

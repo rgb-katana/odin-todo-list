@@ -10,6 +10,14 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond(tab-land) {
+    width: 90vw;
+  }
+
+  @include respond(tab-port) {
+    width: 100vw;
+  }
+
   &__title {
     margin-bottom: 2rem;
   }
@@ -25,6 +33,11 @@
 
     & > *:not(:last-child) {
       margin-bottom: 2rem;
+    }
+
+    @include respond(tab-land) {
+      height: auto;
+      height: 35vh;
     }
   }
 

@@ -8,6 +8,14 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond(tab-land) {
+    width: 90vw;
+  }
+
+  @include respond(tab-port) {
+    width: 100vw;
+  }
+
   border-radius: 0.3rem;
 
   & > *:not(:last-child) {
@@ -20,8 +28,28 @@
     overflow-y: auto;
     overflow-x: hidden;
 
+    & > * {
+      min-width: 30rem;
+    }
+
     & > *:not(:last-child) {
       margin-bottom: 2rem;
+
+      @include respond(tab-land) {
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond(tab-land) {
+      height: 32rem;
+      display: flex;
+      flex-direction: row;
+      overflow-y: hidden;
+      width: 90vw;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      overflow-x: scroll;
     }
   }
 
@@ -39,6 +67,12 @@
     border-radius: 0.3rem;
 
     box-shadow: 0rem 0.5rem 0.5rem rgba($shadow-color-lt, 0.3);
+  }
+
+  &__add {
+    @include respond(tab-land) {
+      width: 33%;
+    }
   }
 
   &__add-btn {

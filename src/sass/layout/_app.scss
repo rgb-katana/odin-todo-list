@@ -9,4 +9,15 @@
   grid-template-columns: 35rem 1fr;
   grid-column-gap: 2rem;
   justify-self: center;
+
+  @include respond(tab-land) {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 1fr;
+    grid-gap: 2rem;
+  }
+
+  @include respond(tab-port) {
+    width: 100vw;
+  }
 }
